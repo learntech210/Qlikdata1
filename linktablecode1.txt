@@ -1,0 +1,9 @@
+linktable:
+Load Distinct
+ AutoNumber([Product_ID]&[Supplier_ID]&[Material_ID]) as %key,
+ [Product_ID],
+ [Supplier_ID],
+ [Material_ID]
+//  'PO' as Flag
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Invoice);
